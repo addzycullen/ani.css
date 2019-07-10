@@ -99,10 +99,6 @@ npm install
 `gulp watch` requires you to make changes to a file.
 
 ```
-gulp scripts
-
-or
-
 gulp styles
 
 or
