@@ -1,6 +1,5 @@
 node_modules/
 src/styles/demo.scss
 dist/styles/demo.css
-dist/styles/demo.min.css
-dist/styles/demo.min.css.map
+dist/styles/demo.css.map
 index.html
