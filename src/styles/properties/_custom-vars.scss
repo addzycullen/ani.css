@@ -8,22 +8,31 @@
     animation: var(--ani-name) var(--ani-speed) var(--ani-timing) var(--ani-delay) var(--ani-loop) var(--ani-dir) var(--ani-fill);
 }
 
-.ani__in {
+.ani--in {
     opacity: 0;
     animation: var(--ani-in-name) var(--ani-in-speed) var(--ani-in-timing) var(--ani-in-delay) var(--ani-in-loop) var(--ani-in-dir) var(--ani-in-fill);
 }
 
-.ani__out {
+.ani--out {
     opacity: 1;
     animation: var(--ani-out-name) var(--ani-out-speed) var(--ani-out-timing) var(--ani-out-delay) var(--ani-out-loop) var(--ani-out-dir) var(--ani-out-fill);
+}
+
+.ani--trigger {
+}
+.ani--trigger--in {
+    opacity: 0;
+}
+.ani--trigger--out {
+    opacity: 1;
 }
 
 // Accessibility.
 // Immediately jump any animation to the end point for print and if the user has set their device to "prefers reduced motion".
 @media (print), (prefers-reduced-motion: reduce) {
     .ani,
-    .ani__in,
-    .ani__out {
+    .ani--in,
+    .ani--out {
         animation-duration: 0.001s !important;
         transition-duration: 0.001s !important;
     }

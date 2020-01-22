@@ -16,7 +16,7 @@ All animations are stored in an easy to navigate folder structure so you can eas
 
 This is the preferred method, it gives you as a developer greater customization options, less unused code and takes advantage of newer technologies.
 
-Use the class `ani`, `ani__in`, `ani__out`
+Use the class `ani`, `ani--in`, `ani--out`
 
 ```
 <div class="ani">
@@ -38,8 +38,8 @@ animation: fade-in-top .25s ease;
 
 ```
 <div class="ani" style="--ani--name: kenburns-top; --ani--speed: .5s; --ani-loop: infinite; --ani--timing: var(--ani-easeInOutQuad);"></div>
-<div class="ani__in" style="--ani-in-name: fade-in-top; --ani-in-speed: .25s; --ani-in-timing: var(--ani-easeInQuad);"></div>
-<div class="ani__out" style="--ani-out-name: fade-out; --ani-out-speed: .25s; --ani-out-timing: var(--ani-easeOutQuad);"></div>
+<div class="ani--in" style="--ani-in-name: fade-in-top; --ani-in-speed: .25s; --ani-in-timing: var(--ani-easeInQuad);"></div>
+<div class="ani--out" style="--ani-out-name: fade-out; --ani-out-speed: .25s; --ani-out-timing: var(--ani-easeOutQuad);"></div>
 
 ```
 
@@ -49,13 +49,13 @@ animation: fade-in-top .25s ease;
 | `--ani-delay` | `--ani-loop`  | `--ani-dir`    |
 | `--ani-fill`  |               |                |
 
-| Possible Vars    | Class: `ani__in` |                   |
+| Possible Vars    | Class: `ani--in` |                   |
 | ---------------- | ---------------- | ----------------- |
 | `--ani-in-name`  | `--ani-in-speed` | `--ani-in-timing` |
 | `--ani-in-delay` | `--ani-in-loop`  | `--ani-in-dir`    |
 | `--ani-in-fill`  |                  |                   |
 
-| Possible Vars     | Class: `ani__out` |                    |
+| Possible Vars     | Class: `ani--out` |                    |
 | ----------------- | ----------------- | ------------------ |
 | `--ani-out-name`  | `--ani-out-speed` | `--ani-out-timing` |
 | `--ani-out-delay` | `--ani-out-loop`  | `--ani-out-dir`    |
