@@ -16,17 +16,17 @@ All animations are stored in an easy to navigate folder structure so you can eas
 
 This is the preferred method, it gives you as a developer greater customization options, less unused code and takes advantage of newer technologies.
 
-Use the class `ani--sh` or `ani--shorthand`
+Use the class `ani`, `ani__in`, `ani__out`
 
 ```
-<div class="ani--sh">
+<div class="ani">
 </div>
 ```
 
 Add relevant CSS Vars with desired values in the elements style tag.
 
 ```
-<div class="ani--sh" style="--ani--name: fade-in-top; --ani--speed: .25s; --ani--timing: cubic-bezier(0.25, 0.46, 0.45, 0.94); --ani--delay: .25s; --ani--loop: 1; --ani--dir: normal; --ani--fill: forwards;">
+<div class="ani" style="--ani-name: fade-in-top; --ani-speed: .25s; --ani-timing: cubic-bezier(0.25, 0.46, 0.45, 0.94); --ani-delay: .25s; --ani-loop: 1; --ani-dir: normal; --ani-fill: forwards;">
 </div>
 ```
 
@@ -41,11 +41,36 @@ animation: fade-in-top .25s ease;
 </div>
 ```
 
-| Possible Vars  |                |                 |
-| -------------- | -------------- | --------------- |
-| `--ani--name`  | `--ani--speed` | `--ani--timing` |
-| `--ani--delay` | `--ani--loop`  | `--ani--dir`    |
-| `--ani--fill`  |                |                 |
+| Possible Vars | Class `ani`   |                |
+| ------------- | ------------- | -------------- |
+| `--ani-name`  | `--ani-speed` | `--ani-timing` |
+| `--ani-delay` | `--ani-loop`  | `--ani-dir`    |
+| `--ani-fill`  |               |                |
+
+| Possible Vars    | Class: `ani__in` |                   |
+| ---------------- | ---------------- | ----------------- |
+| `--ani-in-name`  | `--ani-in-speed` | `--ani-in-timing` |
+| `--ani-in-delay` | `--ani-in-loop`  | `--ani-in-dir`    |
+| `--ani-in-fill`  |                  |                   |
+
+| Possible Vars     | Class: `ani__out` |                    |
+| ----------------- | ----------------- | ------------------ |
+| `--ani-out-name`  | `--ani-out-speed` | `--ani-out-timing` |
+| `--ani-out-delay` | `--ani-out-loop`  | `--ani-out-dir`    |
+| `--ani-out-fill`  |                   |                    |
+
+| Possible Vars       | Timing Functions     |                        |
+| ------------------- | -------------------- | ---------------------- |
+| `--ani-ease`        | `--ani-easeIn`       | `--ani-easeOut`        |
+| `--ani-easeInOut`   | `--ani-linear`       |                        |
+| `--ani-easeInSine`  | `--ani-easeOutSine`  | `--ani-easeInOutSine`  |
+| `--ani-easeInCubic` | `--ani-easeOutCubic` | `--ani-easeInOutCubic` |
+| `--ani-easeInQuint` | `--ani-easeOutQuint` | `--ani-easeInOutQuint` |
+| `--ani-easeInCirc`  | `--ani-easeOutCirc`  | `--ani-easeInOutCirc`  |
+| `--ani-easeInQuad`  | `--ani-easeOutQuad`  | `--ani-easeInOutQuad`  |
+| `--ani-easeInQuart` | `--ani-easeOutQuart` | `--ani-easeInOutQuart` |
+| `--ani-easeInExpo`  | `--ani-easeOutExpo`  | `--ani-easeInOutExpo`  |
+| `--ani-easeInBack`  | `--ani-easeOutBack`  | `--ani-easeInOutBack`  |
 
 ### Utility Classes
 
@@ -64,19 +89,6 @@ Use the class `ani` to state this element will be animated
 
 ```
 <div class="ani ani--fade-in ani--speed__200 ani--timing__ease">
-</div>
-```
-
----
-
-### CSS Custom Variables & Utility Classes
-
-This method allows you to use a mixture of both methods, however, you can still comment out the `_custom-vars.scss` file from the base file as you will not need it for this. This method works by using existing Utility Classes where possible and then using CSS Vars in other places where you need more customization by adding `__var` to the end of the class.
-
-For example, here you can see we use a utility class for the animation name but a custom var for the speed and timing function as those values do not exist in our library of utility classes.
-
-```
-<div class="ani ani--fade-in__fwd ani--speed__var ani--timing__var"  style="--ani--speed: 1.25ss; --ani--timing:cubic-bezier(0.25, 0.46, 0.45, 0.94);">
 </div>
 ```
 
