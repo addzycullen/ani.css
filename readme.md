@@ -72,6 +72,8 @@ animation: fade-in-top .25s ease;
 | `--ani-easeInExpo`  | `--ani-easeOutExpo`  | `--ani-easeInOutExpo`  |
 | `--ani-easeInBack`  | `--ani-easeOutBack`  | `--ani-easeInOutBack`  |
 
+---
+
 ### Utility Classes
 
 This is method is probably more familiar to most people has a few drawbacks performance wise. As a developer you have less customization options, and more unused code as all possible values for each animation property has it's own class. As you can imagine this adds a lot of code, a lot of which you may never need/use. You also have less control over timings, any properties set to a time will have a class for every hundred milliseconds up to 1500, you may never need more that that but it's still limiting.
