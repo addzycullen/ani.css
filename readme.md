@@ -16,18 +16,17 @@ All animations are stored in an easy to navigate folder structure so you can eas
 
 This is the preferred method, it gives you as a developer greater customization options, less unused code and takes advantage of newer technologies.
 
-Use the class `ani`, `ani--in`, `ani--out`
+Use the class `ani`, `ani-in`, `ani-out`
 
 ```
-<div class="ani">
+<div class="ani:true">
 </div>
 ```
 
 Add relevant CSS Vars with desired values in the elements style tag.
 
 ```
-<div class="ani" style="--ani-name: fade-in-top; --ani-speed: .25s; --ani-timing: cubic-bezier(0.25, 0.46, 0.45, 0.94); --ani-delay: .25s; --ani-loop: 1; --ani-dir: normal; --ani-fill: forwards;">
-</div>
+<div class="ani:true" style="--ani-name: fade-in-top; --ani-speed: .25s; --ani-timing: cubic-bezier(0.25, 0.46, 0.45, 0.94); --ani-delay: .25s; --ani-loop: 1; --ani-dir: normal; --ani-fill: forwards;"></div>
 ```
 
 You can pass as few or as many css custom vars as you'd like through the style tag, you can add these as if you're writing an `animation:` property in CSS.
@@ -37,9 +36,9 @@ animation: fade-in-top .25s ease;
 ```
 
 ```
-<div class="ani" style="--ani--name: kenburns-top; --ani--speed: .5s; --ani-loop: infinite; --ani--timing: var(--ani-easeInOutQuad);"></div>
-<div class="ani--in" style="--ani-in-name: fade-in-top; --ani-in-speed: .25s; --ani-in-timing: var(--ani-easeInQuad);"></div>
-<div class="ani--out" style="--ani-out-name: fade-out; --ani-out-speed: .25s; --ani-out-timing: var(--ani-easeOutQuad);"></div>
+<div class="ani:true" style="--ani--name: kenburns-top; --ani--speed: .5s; --ani-loop: infinite; --ani--timing: var(--ani-easeInOutQuad);"></div>
+<div class="ani-in:true" style="--ani-in-name: fade-in-top; --ani-in-speed: .25s; --ani-in-timing: var(--ani-easeInQuad);"></div>
+<div class="ani-out:true" style="--ani-out-name: fade-out; --ani-out-speed: .25s; --ani-out-timing: var(--ani-easeOutQuad);"></div>
 
 ```
 
@@ -49,17 +48,17 @@ animation: fade-in-top .25s ease;
 | `--ani-delay` | `--ani-loop`  | `--ani-dir`    |
 | `--ani-fill`  |               |                |
 
-| Possible Vars    | Class: `ani--in` |                   |
-| ---------------- | ---------------- | ----------------- |
-| `--ani-in-name`  | `--ani-in-speed` | `--ani-in-timing` |
-| `--ani-in-delay` | `--ani-in-loop`  | `--ani-in-dir`    |
-| `--ani-in-fill`  |                  |                   |
+| Possible Vars    | Class: `ani-in`, `ani-in:true` |                   |
+| ---------------- | ------------------------------ | ----------------- |
+| `--ani-in-name`  | `--ani-in-speed`               | `--ani-in-timing` |
+| `--ani-in-delay` | `--ani-in-loop`                | `--ani-in-dir`    |
+| `--ani-in-fill`  |                                |                   |
 
-| Possible Vars     | Class: `ani--out` |                    |
-| ----------------- | ----------------- | ------------------ |
-| `--ani-out-name`  | `--ani-out-speed` | `--ani-out-timing` |
-| `--ani-out-delay` | `--ani-out-loop`  | `--ani-out-dir`    |
-| `--ani-out-fill`  |                   |                    |
+| Possible Vars     | Class: `ani-out`, `ani-out:true` |                    |
+| ----------------- | -------------------------------- | ------------------ |
+| `--ani-out-name`  | `--ani-out-speed`                | `--ani-out-timing` |
+| `--ani-out-delay` | `--ani-out-loop`                 | `--ani-out-dir`    |
+| `--ani-out-fill`  |                                  |                    |
 
 | Possible Vars       | Timing Functions     |                        |
 | ------------------- | -------------------- | ---------------------- |
