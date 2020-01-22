@@ -56,31 +56,6 @@
     --ani-easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-// Default Ani Classes.
-// Needed to trigger any animation unless using '.ani--sh' or '.ani--shorthand' classes.
-.ani {
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.ani--in {
-    opacity: 0;
-}
-
-.ani--out {
-    opacity: 1;
-}
-// Accessibility.
-// Immediately jump any animation to the end point for print and if the user has set their device to "prefers reduced motion".
-@media (print), (prefers-reduced-motion: reduce) {
-    .ani,
-    .ani--sh,
-    .ani--shorthand {
-        animation-duration: 0.001s !important;
-        transition-duration: 0.001s !important;
-    }
-}
-
 // Animation Properties.
 // @import 'properties/utilities'; // If you're using css vars, comment out this file.
 @import 'properties/custom-vars'; // If you're using utility classes, comment out this file.
