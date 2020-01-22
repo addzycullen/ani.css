@@ -5,79 +5,17 @@
 
 .ani--sh,
 .ani--shorthand {
-    // Set all animation properties to the default, will be overridden in the html.
-    --ani--name: fade-in;
-    --ani--speed: 0s;
-    --ani--timing: ease;
-    --ani--delay: 0s;
-    --ani--loop: 1;
-    --ani--dir: normal;
-    --ani--fill: none;
-
     // Set up animation shorthand.
-    animation: var(--ani--name) var(--ani--speed) var(--ani--timing) var(--ani--delay) var(--ani--loop) var(--ani--dir) var(--ani--fill);
-    // Set in html by using style="--ani--name: fade-in; --ani--speed: .25s; --ani--timing: ease-in; --ani--delay: .25s; --ani--loop: 1; --ani--dir: normal; --ani--fill: forwards;"
+    animation: var(--ani_name) var(--ani_speed) var(--ani_timing) var(--ani_delay) var(--ani_loop) var(--ani_dir) var(--ani_fill);
+    // Set in html by using style="--ani_name: fade-in; --ani_speed: .25s; --ani_timing: ease-in; --ani_delay: .25s; --ani_loop: 1; --ani_dir: normal; --ani_fill: forwards;"
 }
 
-.ani--speed,
-.ani--spd,
-.ani--duration {
-    animation-duration: initial; // Default class will use default css spec value.
-
-    &__var {
-        animation-duration: 0.25s; // Fallback speed for browsers that dont support css custom variables.
-        animation-duration: var(--ani--speed); // Set in html by using style="--ani-speed: .25s;"
-    }
+.ani__in--sh,
+.ani__in--shorthand {
+    animation: var(--ani_in-name) var(--ani_in-speed) var(--ani_in-timing) var(--ani_in-delay) var(--ani_in-loop) var(--ani_in-dir) var(--ani_in-fill);
 }
 
-.ani--timing,
-.ani--tf {
-    animation-timing-function: initial; // Default class will use default css spec value.
-
-    &__var {
-        animation-timing-function: ease; // Fallback speed for browsers that dont support css custom variables.
-        animation-timing-function: var(--ani--timing); // Set in html by using style="--ani-timing: ease-in;"
-    }
-}
-
-.ani--delay,
-.ani--dly {
-    animation-delay: initial; // Default class will use default css spec value.
-
-    &__var {
-        animation-delay: 0.25s; // Fallback speed for browsers that dont support css custom variables.
-        animation-delay: var(--ani--delay); // Set in html by using style="--ani-delay: .25s;"
-    }
-}
-
-.ani--loop,
-.ani--iteration-count,
-.ani--ic {
-    animation-iteration-count: initial; // Default class will use default css spec value.
-
-    &__var {
-        animation-iteration-count: 1; // Fallback speed for browsers that dont support css custom variables.
-        animation-iteration-count: var(--ani--loop); // Set in html by using style="--ani-loop: 1;"
-    }
-}
-
-.ani--dir,
-.ani--direction {
-    animation-direction: initial; // Default class will use default css spec value.
-
-    &__var {
-        animation-direction: normal; // Fallback speed for browsers that dont support css custom variables.
-        animation-direction: var(--ani--dir); // Set in html by using style="--ani-dir: normal;"
-    }
-}
-
-.ani--fill,
-.ani--fill-mode,
-.ani--fm {
-    animation-fill-mode: initial; // Default class will use default css spec value.
-
-    &__var {
-        animation-fill-mode: forwards; // Fallback speed for browsers that dont support css custom variables.
-        animation-fill-mode: var(--ani--fill); // Set in html by using style="--ani-fill: forwards;"
-    }
+.ani__out--sh,
+.ani__out--shorthand {
+    animation: var(--ani_out-name) var(--ani_out-speed) var(--ani_out-timing) var(--ani_out-delay) var(--ani_out-loop) var(--ani_out-dir) var(--ani_out-fill);
 }
