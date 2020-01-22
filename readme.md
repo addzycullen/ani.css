@@ -1,10 +1,10 @@
 # ani.css
 
-**ani.css** is a highly customizable CSS/SCSS library perfect for adding simple animations to your website. Choose between CSS Custom Vars &amp; Utility Classes for an experience that suit you.
+**ani.css** is a highly customizable CSS/SCSS library perfect for adding simple animations to your website. Choose between CSS Custom Properties &amp; Utility Classes for an experience that suit you.
 
 **ani** comes with a gulp file set up so that you can edit and compile the library to your hearts content.
 
-There are three ways to use **ani**, CSS Custom Variables, Utility Classes or Both. By default, ani has both methods ready to go, reduce your file size by simply commenting out the method you DON'T want to use, compile and you're good to go.
+There are two ways to use **ani**, CSS Custom Properties or Utility Classes or Both. By default, ani uses CSS Custom Properties, reduce your file size by simply commenting out the method you DON'T want to use, compile and you're good to go.
 
 All animations are stored in an easy to navigate folder structure so you can easily see what animations are present, just simply comment out any animations you do not want before compiling to reduce the file size.
 
@@ -37,8 +37,10 @@ animation: fade-in-top .25s ease;
 ```
 
 ```
-<div class="ani--sh" style="--ani--name: fade-in-top; --ani--speed: .25s; --ani--timing: ease;">
-</div>
+<div class="ani" style="--ani--name: kenburns-top; --ani--speed: .5s; --ani-loop: infinite; --ani--timing: var(--ani-easeInOutQuad);"></div>
+<div class="ani__in" style="--ani-in-name: fade-in-top; --ani-in-speed: .25s; --ani-in-timing: var(--ani-easeInQuad);"></div>
+<div class="ani__out" style="--ani-out-name: fade-out; --ani-out-speed: .25s; --ani-out-timing: var(--ani-easeOutQuad);"></div>
+
 ```
 
 | Possible Vars | Class `ani`   |                |
@@ -90,8 +92,7 @@ Use the class `ani` to state this element will be animated
 `ani` needs to be followed by classes setting other animation properties, i.e
 
 ```
-<div class="ani ani--fade-in ani--speed__200 ani--timing__ease">
-</div>
+<div class="ani ani--fade-in ani--speed__200 ani--timing__ease"></div>
 ```
 
 ---
